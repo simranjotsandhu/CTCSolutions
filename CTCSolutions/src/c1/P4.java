@@ -8,6 +8,7 @@ package c1;
 public class P4{
     public static void main(String args[]) {
 	P4 obj = new P4();
+	// This is the string
 	char[] toCheckCTC = "s i m p y\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0".toCharArray();
 	long start = System.nanoTime();
 	System.out.println(obj.replace("s i m p y"));
