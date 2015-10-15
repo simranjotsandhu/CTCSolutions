@@ -9,6 +9,7 @@ public class P8 {
 	    return isSubstring(s1, s2);
 	}
 	boolean isSubstring(String s1, String s2){
+		// assumed
 		return false;
 	}
 }
