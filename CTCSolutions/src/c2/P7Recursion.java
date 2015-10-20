@@ -7,6 +7,7 @@ public class P7Recursion {
 	}
 
 	public boolean isPalindrome(Node<Integer> head) {
+		// method to check if palindrome.
 		Node<Integer> forLength = head;
 		int length = 0;
 		while (forLength != null) {
