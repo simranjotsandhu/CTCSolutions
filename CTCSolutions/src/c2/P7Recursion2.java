@@ -6,6 +6,15 @@ public class P7Recursion2 {
 		Node<T> next;
 	}
 
+	class Result {
+		public Result(Node n, boolean isP) {
+			this.n = n;
+			this.isPalindrome = isP;
+		}
+		Node n;
+		boolean isPalindrome;
+	}
+
 	public boolean isPalindrome(Node<Integer> head) {
 		Node<Integer> forLength = head;
 		int length = 0;
@@ -13,31 +22,20 @@ public class P7Recursion2 {
 			length += 1;
 			forLength = forLength.next;
 		}
-		return checkViaRecursion(head, length, 0);
+		return checkViaRecursion(head, length).isPalindrome;
 	}
 
-	private boolean checkViaRecursion(Node<Integer> head, int length, int pointer) {
-		
-		if (pointer <= length/2){
-			int toCompareWith = head.c;
-			checkViaRecursion(head.next, length, pointer+1);
-		}else{
-			if(pointer == (length/2+1) && length%2==0){
-				return true;
-			}
-			
+	private Result checkViaRecursion(Node<Integer> head, int length) {
+		if (head == null && length == 0) {
+			return new Result(null, true);
+		} else if (length == 0) {
+			return new Result(head.next, head.c == head.next.c);
 		}
-		
-		
-		int toCompareWith;
-		if(pointer > length/2){
-			if(length%2 == 0){
-				
-			}else{
-				
-			}
+		if(length == 1){
+			return new Result(null, true);
 		}
-		return false;
+		Result res = checkViaRecursion(head.next, length - 2);
+		return new Result(head.next, head.c == res.n.c);
 	}
 
 }
