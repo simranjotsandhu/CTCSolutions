@@ -12,6 +12,7 @@ public class P7Recursion2 {
 			this.isPalindrome = isP;
 		}
 		// new node
+		
 		Node n;
 		boolean isPalindrome;
 	}
