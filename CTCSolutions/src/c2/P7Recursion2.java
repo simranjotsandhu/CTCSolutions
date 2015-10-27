@@ -26,7 +26,6 @@ public class P7Recursion2 {
 		}
 		return checkViaRecursion(head, length).isPalindrome;
 	}
-
 	
 	private Result checkViaRecursion(Node<Integer> head, int length) {
 		if (head == null && length == 0) {
