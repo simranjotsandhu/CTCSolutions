@@ -20,6 +20,7 @@ public class P7Recursion2 {
 
 	public boolean isPalindrome(Node<Integer> head) {
 		Node<Integer> forLength = head;
+		
 		int length = 0;
 		while (forLength != null) {
 			length += 1;
