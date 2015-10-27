@@ -13,6 +13,7 @@ public class P7Recursion2 {
 		}
 		// new node
 		
+		
 		Node n;
 		boolean isPalindrome;
 	}
