@@ -12,8 +12,7 @@ public class SingletonClass {
 		if (_instance == null) {
 			_instance = new SingletonClass();
 			return _instance;
-		} else {
-			throw new SingletonErrorException("Object Already exists!");
 		}
+		return _instance;
 	}
 }
