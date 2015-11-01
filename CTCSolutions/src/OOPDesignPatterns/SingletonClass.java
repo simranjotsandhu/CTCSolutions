@@ -15,4 +15,15 @@ public class SingletonClass {
 		}
 		return _instance;
 	}
+
+	public static boolean isPalindrome(int data){
+		   int temp = data; 
+		   int reverse = 0;
+		       while(temp!=0){
+		           reverse <<= 1;
+		           reverse |= (temp & 1);
+		           temp >>= 1;
+		         }
+		    return (reverse == data);
+		}
 }
